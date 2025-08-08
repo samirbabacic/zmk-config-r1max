@@ -5,7 +5,7 @@ if SHIELD_R1MAX_LEFT
 config ZMK_KEYBOARD_NAME
     default "r1max"
 
-config ZMK_R1MAX_CENTRAL
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
