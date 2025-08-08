@@ -1,16 +1,16 @@
 
-if SHIELD_MY_KEYBOARD_LEFT
+if SHIELD_R1MAX_LEFT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
     default "r1max"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+config ZMK_R1MAX_CENTRAL
     default y
 
 endif
 
-if SHIELD_MY_KEYBOARD_LEFT || SHIELD_MY_KEYBOARD_RIGHT
+if SHIELD_R1MAX_LEFT || SHIELD_R1MAX_RIGHT
 
 config ZMK_SPLIT
     default y
