@@ -15,20 +15,5 @@
                                                         &kp BSPC  &kp DEL   &kp END     &kp PG_DN &kp RET   &kp SPACE
             >;
         }; 
-        extra {
-            status = "reserved";
-        };
-
-        extra1 {
-            status = "reserved";
-        };
-
-        extra2 {
-            status = "reserved";
-        }; 
-
-        extra2 {
-            status = "reserved";
-        }; 
     };
  };
