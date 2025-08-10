@@ -28,7 +28,7 @@
             status = "reserved";
         }; 
 
-        extra2 {
+        extra3 {
             status = "reserved";
         }; 
     };
