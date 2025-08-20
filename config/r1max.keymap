@@ -56,13 +56,13 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3     &kp N4     &kp N5      &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E      &kp R      &kp T       &kp Y      &kp U     &kp I      &kp O     &kp P     &kp EQUAL
-&kp ESC    &kp A      &kp S     &kp D      &kp F      &kp G       &kp H      &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C      &kp V      &kp B       &kp N      &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp LCTRL  &kp GRAVE  &kp BSLH  &kp LEFT   &kp RIGHT                         &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 1
-                                &kp SPACE  &kp RET    &kp RGUI    &kp RCTRL  &kp HOME  &kp BSPC
-                                &kp PG_UP  &kp DEL    &kp END     &kp PG_DN  &kp LALT  &kp PG_UP
+&kp ESC    &kp N1     &kp N2    &kp N3                     &kp N4                           &kp N5    &kp N6  &kp N7                             &kp N8                          &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E                      &kp R                            &kp T     &kp Y   &kp U                              &kp I                           &kp O     &kp P     &kp EQUAL
+&kp ESC    &kp A      &kp S     &kp D                      &kp F                            &kp G     &kp H   &kp J                              &kp K                           &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C                      &kp V                            &kp B     &kp N   &kp M                              &kp COMMA                       &kp DOT   &kp FSLH  &kp RSHFT
+&kp LCTRL  &kp GRAVE  &kp BSLH  &kp LEFT                   &kp RIGHT                                          &kp UP                             &kp DOWN                        &kp LBKT  &kp RBKT  &mo 1
+                                &kp SPACE                  &THUMB_MOD_TAP ENTER LEFT_SHIFT  &trans    &trans  &THUMB_MOD_TAP RIGHT_SHIFT DELETE  &kp BSPC
+                                &THUMB_MOD_TAP LCTRL HOME  &THUMB_MOD_TAP LEFT_ALT END      &trans    &trans  &THUMB_MOD_TAP RIGHT_ALT PAGE_UP   &THUMB_MOD_TAP RCTRL PAGE_DOWN
             >;
         };
 
@@ -78,6 +78,64 @@
             >;
         };
 
-        extra3 { status = "reserved"; };
+        Symbols {
+            bindings = <
+&trans  &trans  &trans  &trans       &trans     &trans    &trans     &trans          &trans           &trans                &trans                 &trans
+&trans  &trans  &trans  &kp DOLLAR   &kp CARET  &trans    &kp PLUS   &kp LBKT        &kp RBKT         &kp EXCL              &trans                 &trans
+&trans  &trans  &trans  &kp AT_SIGN  &kp HASH   &trans    &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans  &trans  &trans       &trans     &trans    &kp MINUS  &kp AMPERSAND   &kp PIPE         &kp QUESTION          &trans                 &trans
+&trans  &trans  &trans  &trans       &trans                          &trans          &trans           &trans                &trans                 &trans
+                        &trans       &trans     &trans    &trans     &trans          &trans
+                        &trans       &trans     &trans    &trans     &trans          &trans
+            >;
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Debugging {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        extra_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        extra_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
