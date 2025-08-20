@@ -5,6 +5,52 @@
 #define L_CFG 1
 
 / {
+    behaviors {
+        THUMB_MOD_TAP: THUMB_MOD_TAP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MOD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+        };
+
+        THUMB_LAYER_TAP: THUMB_LAYER_TAP {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_LAYER_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+        };
+
+        HR_MOD: HR_MOD {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HR_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        HR_LAYER: HR_LAYER {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HR_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,10 +77,6 @@
                                             &none         &none         &none           &none  &none        &none
             >;
         };
-
-        extra1 { status = "reserved"; };
-
-        extra2 { status = "reserved"; };
 
         extra3 { status = "reserved"; };
     };
